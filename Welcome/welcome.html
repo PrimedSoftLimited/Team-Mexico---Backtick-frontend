@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/welcome.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="logo">backtick</div>
+            <div id="social-icons">
+                <i class="fas fa-envelope-open"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter-square"></i>
+            </div>
+        </header>
+        <div id="overlay"></div>
+        <button id="btn-home">Join</button>
+        <div id="con-btn-app">
+            <div class="btn-app">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg">
+            </div>
+            <div class="btn-app">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Get_it_on_Google_play.svg">
+            </div>
+        </div>
+    </div>
+    <div id="form-user">
+        <div id="form-head">
+            <div id="login-head">Login</div>
+            <div id="register-head">Sign up</div>
+        </div>
+        <div id="form-body">
+            <form id="login" method="GET" action="">
+                <div id="con-login-email">
+                    <label for="login-email"></label>
+                    <div class="con-input">
+                        <i class="fas fa-envelope icon-input"></i>
+                        <input id="login-email" name="login-email" type="email" value="Enter email address" placeholder="" required>
+                    </div>
+                </div>
+                <div id="con-login-pwd">
+                    <label for="login-pwd"></label>
+                    <div class="con-input">
+                        <i class="fas fa-lock icon-input"></i>
+                        <input id="login-pwd" name="login-pwd" type="password" value="Enter password" placeholder="" required>
+                    </div>
+                </div>
+                <input id="login-btn" type="submit" value="Dashboard">
+            </form>
+            
+            <form id="register" method="POST" action="">
+                <div>
+                    <label for="usr"></label>
+                    <div class="con-input">
+                        <i class="fas fa-user-plus icon-input"></i>
+                        <input id="usr" name="usr" class="fas fa-user-plus" type="text" value="Enter username" size="10" placeholder="" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="reg-email"></label>
+                    <div class="con-input">
+                        <i class="fas fa-envelope icon-input"></i>
+                        <input id="reg-email" name="reg-email" type="email" value="Enter email address" placeholder="" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="reg-pwd"></label>
+                    <div class="con-input">
+                        <i class="fas fa-lock icon-input"></i>
+                        <input id="reg-pwd" name="reg-pwd" type="password" value="Enter password" placeholder="" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="reg-pwd-confirm"></label>
+                    <div class="con-input">
+                        <i class="fas fa-lock icon-input"></i>
+                        <input id="reg-pwd-confirm" name="reg-pwd-confirm" type="password" value="Re-enter password" placeholder="" required>
+                    </div>
+                </div>
+                <input id="reg-btn" type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+    <script src="welcome.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+#container {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    background: url('../assets/images/highrise.jpeg');
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    background: rgba(0, 0, 0, .4);
+}
+#overlay {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    left: -101%;
+    border: none;
+    transition: top 3s ease-in-out 2s, left 1.08s ease-in-out, background 1s ease 1s, box-shadow .2s ease;
+}
+#overlay.active {
+    background: rgba(0, 0, 0, .4);
+    left: 5%;
+    top: 5%;
+    box-shadow: 300px 300px 300pt 300pt rgba(0, 0, 0, 0.4);
+}
+#logo {
+    cursor: pointer;
+    color: black;
+    margin-left: 5%;
+    width: auto;
+    padding: 0px 2px;
+    font-size: 2em;
+    box-shadow: 0 0 0 2pt black;
+}
+#logo:hover {
+    color: deepskyblue;
+    box-shadow: 0 0 0 2pt deepskyblue;
+}
+#social-icons {
+    color: #999999;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+}
+#social-icons * {
+    cursor: pointer;
+    font-size: 2em;
+}
+#btn-home {
+    cursor: pointer;
+    position: absolute;
+    top: 42%;
+    left: 46%;
+    padding: 3px 10px;
+    font-size: 2.5rem;
+    background-color: inherit;
+    border: 1px solid #999999;
+    color: deepskyblue; 
+    transition: left .7s ease-out;
+}
+#btn-home:hover {
+    box-shadow: 0 0 0 2pt deepskyblue;
+    border: none;
+}
+#btn-home.active {
+    left: 101%;
+}
+#form-user {
+    z-index: 5;
+    position: absolute;
+    top: 10%;
+    left: -50%;
+    width: 35%;
+    height: auto;
+    transition: left 1s ease-in-out .1s;
+}
+#form-user.active {
+    left: 5%;
+    box-shadow: 0 5px 5pt 1.5pt #999999;
+}
+#form-head {
+    display: flex;
+    height: 7vh;
+    background-color: #999999;
+    color: #e0d9d9;
+}
+#form-head div {
+    font-size: 1.5rem;
+    width: 50%;
+    height: 100%;
+    padding: 10px 0px;
+    text-align: center;
+}
+#login-head {
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all .1s ease-out; 
+}
+#login-head.active {
+    background-color: rgb(32, 30, 30);
+    box-shadow: -.5pt -.5pt 0 1.5pt rgb(32, 30, 30);
+    transform: scale(1.005);
+}
+#register-head {
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all .1s ease-out;
+}
+#register-head.active {
+    background-color: rgb(32, 30, 30);
+    box-shadow: -.5pt -.5pt 0 1.5pt rgb(32, 30, 30);
+    transform: scale(1.005);
+}
+#form-head:nth-child(1) {
+    cursor: pointer;
+}
+#form-head:nth-child(2) {
+    cursor: pointer;
+}
+#form-body {
+    padding: 5vh 5%;
+    color: rgb(32, 30, 30);
+    border-right: 1px solid #e0d9d9;
+    border-bottom: 1px solid #e0d9d9;
+    border-left: 1px solid #e0d9d9;
+}
+#login {
+    display: none;
+}
+#login.active {
+    display: block;
+}
+#login-btn {
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding: 3px 2px;
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 2px;
+    width: 60%;
+    margin: 8% 20%;
+    transition: all .1s ease;
+    color: rgb(32, 30, 30);
+}
+#login-btn:hover {
+    transform: scale(1.05);
+}
+#register {
+    display: none;
+}
+#register.active {
+    display: block;
+}
+#reg-btn {
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding: 3px 2px;
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 3px;
+    width: 60%;
+    margin: 8% 20%;
+    transition: all .1s ease;
+    color: rgb(32, 30, 30);
+}
+#reg-btn:hover {
+    transform: scale(1.05);
+}
+form > div {
+    min-height: 8vh;
+    font-size: 1.4rem;
+}
+.con-input {
+    display: flex;
+    width: 100%;
+}
+.icon-input {
+    background-color: inherit;
+    color: rgb(32, 30, 30);
+    min-width: 30px;
+
+}
+form input:not([type="submit"]) {
+    background: rgba(0, 0, 0, .4);
+    border: none;
+    border-radius: 2px;
+    padding: 5px 5px;
+    width: 100%;
+    outline: none;
+    box-shadow: 0 0 3pt deepskyblue;
+    color: deepskyblue;
+}
+form input:not([type="submit"]):focus {
+    border: 2px solid deepskyblue;
+    border-radius: 2px;
+}
+#con-btn-app {
+    display: flex;
+    position: absolute;
+    bottom: 3vh;
+    right: 3vw;
+}
+.btn-app {
+    margin: 0 1vw;
+    cursor: pointer;
+}
+
+/* responsiveness */
