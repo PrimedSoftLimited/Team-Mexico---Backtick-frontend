@@ -1,8 +1,8 @@
 # Team-Mexico---Goal-Setting-website
-Login/Register & View dashboard
+Responsive Login/Register page w/integrated api, & View dashboard page
 
 ## Login/Register to view dashboard
 Load welcome.html file in a browser
 
-#Dashboard
+## Dashboard
 Dashboard shows goals created, and on click, tasks remaining till goal; if specified
