@@ -1,106 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/dashboard.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Laila|Lato|Nanum+Gothic|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Noto+Sans|Raleway|Source+Sans+Pro|Ubuntu|Roboto|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
     <header>
-        <nav class="nav-bar">
-            <div class="nav-link nav-link-left">
-                <div id="btn-menu">
+        <div id="head">
+            <div id="left">
+                <div id="hamburger">
                     <div id="top"></div>
                     <div id="middle"></div>
                     <div id="bottom"></div>
                 </div>
+                <div id="logo">backtick</div>
             </div>
-            <div id="nav-logo" class="nav-link nav-link-middle">backtick</div>
-            <div class="nav-link nav-link-right">
-                <i class="far fa-bell fa-2x icon"></i>
-                <div id="btn-task">
-                    <div id="left"></div>
-                    <div id="right"></div>
-                </div>
+            <div id="middle">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search">
             </div>
-        </nav>
-    </header>
-    <section>
-        <div id="overlay"></div>
-        <div id="sidebar">
-            <div id="items">
-                <div class="item">
-                    <a href="#"><img src="../assets/images/asap.jpg">&ensp;User</a>
+            <div id="right">
+                <div id="user">
+                    <i id="profile" class="far fa-user"></i>
+                    <button id="logout">
+                        Logout
+                    </button>
                 </div>
-                <div class="item">
-                    <a href="#"><i class="fas fa-gavel icon"></i>&ensp;To-do</a>
-                </div>
-                <div class="item">
-                    <a href="#"><i class="fas fa-search icon"></i></a>&ensp;<input class="i-search" type="text" placeholder="Search">
-                </div>
-                <div class="item">
-                    <a href="#"><i class="fas fa-sliders-h icon"></i>&ensp;Preferences</a>
-                </div>
+                <i id="notifications" class="far fa-bell"></i>
+                <!-- <i id="settings" class="fas fa-cog"></i> -->
             </div>
         </div>
-        <aside>
-            <!-- form group? -->
-            <form id="form-goal">
-                <div id="goal-head">
-                    <p id="goal-head-item">Set Goal</p>
+    </header>
+    <div id="main">
+        <nav id="sidebar">
+            <ul>
+                <li>
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-home"></i>HOME
+                        </a>
+                    </div>
+                </li>
+                <hr>
+                <li class="lists">
+                    <div>
+                        <i class="far fa-check-circle"></i>MY LISTS
+                    </div>
+                </li>
+                <ul id="my-lists">
+                    <!-- insert grouped tasks as child lists as user adds personal tasks, e.g personal, shopping, movies to watch -->
+                    <li>
+                        <span>Personal</span>
+                        <span></span>
+                    </li>
+                    <li>
+                        <span>Shopping</span>
+                        <span></span>
+                    </li>
+                    <li>
+                        <span>Movies to watch</span>
+                        <span></span>
+                    </li>
+                </ul>
+                <hr>
+                <li class="tags">
+                    <div>
+                        <i class="fas fa-highlighter"></i>TAGS
+                    </div>
+                </li>
+                <ul id="my-tags">
+                    <!-- insert color coded tags as added by user -->
+                    <li>
+                        <span></span>
+                        <span>Important</span>
+                    </li>
+                    <li>
+                        <span></span>
+                        <span>School</span>
+                    </li>
+                    <li>
+                        <span></span>
+                        <span>Code</span>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+        <section id="group-goal">
+            <div id="con-goal">
+                <div id="today">
+                    <h2>Today</h2>
                 </div>
-                <div id="goal-body">
-                    <div class="goal-item">
-                        <label for="1">SPECIFY GOAL</label>
-                        <input type="text" name="1" value="" placeholder="Specify goal..." maxlength="50" required>
-                    </div>
-                    <div class="goal-item">
-                        <label for="2">GOAL DESCRIPTION</label>
-                        <textarea name="2" form="form-goal" rows="4" cols="40" placeholder="Describe your goal..." required>
-                        </textarea>
-                    </div>
-                        <!-- pill sized dates and input fields displaying selected dates-->
-                    <div class="goal-item">
-                        <label for=3>GOAL DURATION</label>                        
-                        <!-- not this. date start -->
-                        <div id="input-date">
-                            <input type="date" name="3" value="" placeholder="" required>
-                            -<!-- date stop -->
-                            <input type="date" name="3" value="" placeholder="" required>
-                        </div>
-                    </div>
-                    <!-- <div>
-                        <button>
-                            Add tasks
-                        </button>
-                        <p>*Tasks completed makes goal achievable</p>
-                        <div id="task-body">
-                            <div class="task-item">
-                                <label for="3">Specify task</label>
-                                <input type="text" name="3" value="" placeholder="Specify task...">
-                            </div>
-                            <div class="task-item">
-                                <label for="4">Task duration</label> -->
-                                <!-- not this. date start -->
-                                <!--<div id="input-date">
-                                    <input type="date" name="4" value="">-->
-                                    <!-- date stop -->
-                                    <!--<input type="date" name="4" value="">-->
-                                    <!-- dropdown for repeat task button --><!--
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <input id="setgoal" type="submit" value="Set Goal">
+                <div id="tomorrow">
+                    <h2>Tomorrow</h2>
                 </div>
-            </form>
-        </aside>
-        <article id="main-content"></article>
-    </section>
+                <div id="upcoming">
+                    <h2>Upcoming</h2>
+                </div>
+            </div>
+            <div id="con-add-goal">
+
+                <input type="text" id="pseudo-add-goal" placeholder="Click to quickly add a task" class="active" onfocus="activateGoal()">
+
+                <div id="activate">
+                    <input type="text" id="add-goal-title" placeholder="Title">
+                    
+                    <textarea id="add-goal" cols="30" rows="2">Notes</textarea>
+                    
+                    <button onclick="goalDuration()">
+                        <i class="far fa-clock"></i>
+                    </button>
+                    <div id="goal-settings" class="animated fadeInLeft faster">
+                        <div id="goal-settings-head" class="">
+                            Pick date & time
+                        </div>
+                        <hr>
+                        <input type="date" name="" class="goal-settings-body" id="goal-due">
+                        <input type="time" name="" class="goal-settings-body" id="">
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">Does not repeat</option>
+                                <option value="1">Does not repeat</option>
+                                <option value="2">Daily</option>
+                                <option value="3">Weekly</option>
+                                <option value="4">Monthly</option>
+                                <option value="5">Yearly</option>
+                                <option value="6">Custom</option>
+                            </select>
+                        </div>
+                        <button id="submit-goal" type="submit">Save</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="group-subgoal">
+            
+        </section>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="dashboard.js"></script>
 </body>
 </html>
